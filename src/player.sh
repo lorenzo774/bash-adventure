@@ -1,0 +1,22 @@
+#!/bin/bash
+
+PLAYER_POS_X=3
+PLAYER_POS_Y=3
+
+PLAYER_INPUT=0
+PLAYER_DELTA_X=0
+PLAYER_DELTA_Y=0
+
+player_start_update() {
+	PLAYER_DELTA_X=0
+	PLAYER_DELTA_Y=0
+}
+
+player_end_update() {
+	PLAYER_POS_X=$(($PLAYER_POS_X+$PLAYER_DELTA_X))
+	PLAYER_POS_Y=$(($PLAYER_POS_Y+$PLAYER_DELTA_Y))
+}
+
+player_draw() {
+	echo "X: $PLAYER_POS_X, Y: $PLAYER_POS_Y"
+}
